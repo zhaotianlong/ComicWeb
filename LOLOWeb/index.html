@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>LOLO漫画网</title>
+	<link rel="stylesheet" type="text/css" href="css/global.css">
+	<script type="text/javascript" src="js/jquery-2.1.4.js"></script>
+	<script type="text/javascript">
+		var t = n = 0, count;
+		function showAuto()
+		{
+			n = n >=(count - 1) ? 0 : ++n;
+			$("#ComicTitlePic_small li").eq(n).trigger('click');
+		}
+		$(document).ready(function(){	
+			count=$("#ComicTitlePic_big a").length;
+			$("#ComicTitlePic_big a:not(:first-child)").hide();
+		//获取alt值
+		$("#ComicTitlePic_small div").html($("#ComicTitlePic_big a:first-child").find("img").attr('alt'));
+		$("#ComicTitlePic_small div").click(function(){window.open($("#ComicTitlePic_big a:first-child").attr('href'), "_blank")});
+		
+		$("#ComicTitlePic_small li ").click(function() {
+			var i = $(this).find("img").attr('alt') - 1;//获取Li元素内的值，即1，2，3，4
+			//alert(i);
+			n = i;
+			if (i >= count) return;
+			$("#ComicTitlePic_small div").html($("#ComicTitlePic_big a").eq(i).find("img").attr('alt'));
+			$("#ComicTitlePic_small div").unbind().click(function(){window.open($("#ComicTitlePic_big a").eq(i).attr('href'), "_blank")})
+			$("#ComicTitlePic_big a").filter(":visible").fadeOut(500).parent().children().eq(i).fadeIn(1000);
+
+		});
+		t = setInterval("showAuto()", 4000);
+		$("#ComicTitlePic_big").hover(function(){clearInterval(t)}, function(){t = setInterval("showAuto()", 4000);});
+	})
+</script>
+</head>
+<body>
+	<header class="top">
+		<div class="top_container">
+			<div class="top_grid">
+				<a class="grid_wrap">
+					<div class="mobileImg"><img src="icon/web16.png"></div>
+					<div class="webFont">LOLO网</div>
+					<div></div>
+				</a>
+				<a class="grid_wrap">
+					<div class="mobileImg"><img src="icon/shopingcart16.png"></div>
+					<div class="shopingcartFont">周边</div>
+					<div class="mobile3"></div>
+				</a>
+				<a class="grid_wrap">
+					<div class="mobileImg"><img src="icon/share16.png"></div>
+					<div class="shareFont">分享到</div>
+					<div class="mobile3"></div>
+				</a>
+			</div>
+			<div class="top_grid">
+				<a href="" class="grid_wrap regist">注册</a>
+				<a href="" class="grid_wrap login">登录</a>
+			</div>
+		</div>
+	</header>
+	<div style="height:40px;"></div>
+	<div class="container">
+		<div  class="navgate">
+			<div class="navgateBGImage"></div>
+			<div class="navBar">
+				<a class="navGrid navFirstGrid" >首页<span class="fontLine"></span></a>
+				<a class="navGrid fontStyle" >少年漫画<span class="fontLine"></span></a>
+				<a class="navGrid fontStyle" >少女漫画<span class="fontLine"></span></a>
+				<a class="navGrid fontStyle" >魔幻<span class="fontLine"></span></a>
+				<a class="navGrid fontStyle" >玄幻<span class="fontLine"></span></a>
+				<a class="navGrid fontStyle" >机战<span class="fontLine"></span></a>
+				<a class="navGrid fontStyle" >魔幻<span class="fontLine"></span></a> 
+				<a class="navGrid fontStyle" >动作<span class="fontLine"></span></a>
+				<a class="navGrid fontStyle" >爱情<span class="fontLine"></span></a>
+				<a class="navGrid fontStyle" >耽美<span class="fontLine"></span></a>
+				<div class="navGrid">
+					LO事迹
+				</div>
+			</div>
+			<div class="navBarAnnote">
+				<span class="navBarAnnoteFirst">热门点击:</span>
+				<a href="#">野良神</a>
+				<a href="#">一人之下</a>
+				<a href="#">凌舞云姬</a>
+				<a href="#">血魔人</a>
+				<a href="#">最终幻想</a>
+				<a href="#">风色幻想</a>
+			</div>
+		</div>
+		<aside  class="left">
+			<div class="subLeft">
+				<div class="subLeftOne" width="600" height="400">
+					<div id="ComicTitlePic_big">
+						<a href=""><img src="img/bleach.jpg" width="620" height="400" alt="我是一号选手"></a>
+						<a href=""><img src="img/bleach.jpg" width="620" height="400" alt="我是二号选手" ></a>
+						<a href=""><img src="img/bleach.jpg" width="620" height="400" alt="我是三号选手"></a>
+					</div>
+					<div id="ComicTitlePic_small" class="turnTitle">
+						<div>标题！！！！</div>
+						<ul>
+							<li><img src="img/intdex-SLevel/1.jpg" height="47" width="34" alt="1" ></li>
+							<li><img src="img/intdex-SLevel/1.jpg" height="47" width="34" alt="2" ></li>
+							<li><img src="img/intdex-SLevel/1.jpg" height="47" width="34" alt="3"></li>
+						</ul>
+					</div>
+					<div class="subleftFont"></div>
+				</div>
+				<div class="subLeftOne">
+					<div class="flip_container" ontouchstart="this.classList.toggle('hover');">
+						<div class="flipper">
+							<a href="" class="front"><img src="img/advance_1.jpg" height="95" width="310"></a>
+							<a href="" class="back"><img src="img/advance_1.jpg" height="95" width="310"></a>
+						</div>
+					</div>
+					<div class="flip_container" ontouchstart="this.classList.toggle('hover');">
+						<div class="flipper">
+							<a href="" class="front"><img src="img/advance_1.jpg" height="95" width="310"></a>
+							<a href="" class="back"><img src="img/advance_1.jpg" height="95" width="310"></a>
+						</div>
+					</div>
+					<div>
+						<div class="bottomImgTurn">
+							<a href=""><img src="img/advance_1.jpg" height="200" width="150"></a>
+							
+						</div>
+						<div class="bottomImgTurn">
+							<a href=""><img src="img/advance_1.jpg" height="200" width="150"></a>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="subLeftBottom">
+				<div class="subRowTitle bg1">
+					<span class="leftSpan">[一周热门点击]</span>
+					<span class="rightSpan"><a href="">{更多]</a></span>
+				</div>
+				<div class="subRowContent">
+					<ul>
+						<li>
+							<a href="">
+								<img src="img/intdex-SLevel/1.jpg" height="137" width="104">
+							</a>
+							<a href="" class="link">妖神记</a>
+							<span>妖灵世界中的生存</span>
+						</li>
+						<li>
+							<a href="">
+								<img src="img/intdex-SLevel/2.jpg" height="137" width="104">
+							</a>
+							<a href="" class="link">三千虚</a>
+							<span>落难皇子与奇葩千金</span>
+						</li>
+						<li>
+							<a href="">
+								<img src="img/intdex-SLevel/3.jpg" height="137" width="104">
+							</a>
+							<a href="" class="link">猫之名</a>
+							<span>从天上掉下来个妹</span>
+						</li>
+						<li>
+							<a href="">
+								<img src="img/intdex-SLevel/4.jpg" height="137" width="104">
+							</a>
+							<a href="" class="link">最暗恋</a>
+							<span>开启不一样的暗恋吧</span>
+						</li>
+						<li>
+							<a href="">
+								<img src="img/intdex-SLevel/5.jpg" height="137" width="104">
+							</a>
+							<a href="" class="link">丑男变美女</a>
+							<span>屌丝性转火辣美女</span></li>
+							<li>
+								<a href="">
+									<img src="img/intdex-SLevel/6.jpg" height="137" width="104">
+								</a>
+								<a href="" class="link">记忆分裂</a>
+								<span>你的记忆值多少钱！</span>
+							</li>
+							<li>
+								<a href="">
+									<img src="img/intdex-SLevel/7.jpg" height="137" width="104">
+								</a>
+								<a href="" class="link">端脑</a>
+								<span>极致大脑游戏解谜</span>
+							</li>
+						</ul>
+
+					</div>
+				</div>
+				<div class="subLeftBottom">
+					<div class="subRowTitle bg2">
+						<span class="leftSpan">[一周热门点击]</span>
+						<span class="rightSpan"><a href="">{更多]</a></span>
+					</div>
+					<div class="subRowContent">
+						<ul>
+							<li>
+								<a href="">
+									<img src="img/intdex-SLevel/1.jpg" height="137" width="104">
+								</a>
+								<a href="" class="link">妖神记</a>
+								<span>妖灵世界中的生存</span>
+							</li>
+							<li>
+								<a href="">
+									<img src="img/intdex-SLevel/2.jpg" height="137" width="104">
+								</a>
+								<a href="" class="link">三千虚</a>
+								<span>落难皇子与奇葩千金</span>
+							</li>
+							<li>
+								<a href="">
+									<img src="img/intdex-SLevel/3.jpg" height="137" width="104">
+								</a>
+								<a href="" class="link">猫之名</a>
+								<span>从天上掉下来个妹</span>
+							</li>
+							<li>
+								<a href="">
+									<img src="img/intdex-SLevel/4.jpg" height="137" width="104">
+								</a>
+								<a href="" class="link">最暗恋</a>
+								<span>开启不一样的暗恋吧</span>
+							</li>
+							<li>
+								<a href="">
+									<img src="img/intdex-SLevel/5.jpg" height="137" width="104">
+								</a>
+								<a href="" class="link">丑男变美女</a>
+								<span>屌丝性转火辣美女</span></li>
+								<li>
+									<a href="">
+										<img src="img/intdex-SLevel/6.jpg" height="137" width="104">
+									</a>
+									<a href="" class="link">记忆分裂</a>
+									<span>你的记忆值多少钱！</span>
+								</li>
+								<li>
+									<a href="">
+										<img src="img/intdex-SLevel/7.jpg" height="137" width="104">
+									</a>
+									<a href="" class="link">端脑</a>
+									<span>极致大脑游戏解谜</span>
+								</li>
+							</ul>
+
+						</div>
+					</div>
+					<div class="subLeftBottom">
+						<div class="subRowTitle bg3">
+							<span class="leftSpan">[一周热门点击]</span>
+							<span class="rightSpan"><a href="">{更多]</a></span>
+						</div>
+						<div class="subRowContent">
+							<ul>
+								<li>
+									<a href="">
+										<img src="img/intdex-SLevel/1.jpg" height="137" width="104">
+									</a>
+									<a href="" class="link">妖神记</a>
+									<span>妖灵世界中的生存</span>
+								</li>
+								<li>
+									<a href="">
+										<img src="img/intdex-SLevel/2.jpg" height="137" width="104">
+									</a>
+									<a href="" class="link">三千虚</a>
+									<span>落难皇子与奇葩千金</span>
+								</li>
+								<li>
+									<a href="">
+										<img src="img/intdex-SLevel/3.jpg" height="137" width="104">
+									</a>
+									<a href="" class="link">猫之名</a>
+									<span>从天上掉下来个妹</span>
+								</li>
+								<li>
+									<a href="">
+										<img src="img/intdex-SLevel/4.jpg" height="137" width="104">
+									</a>
+									<a href="" class="link">最暗恋</a>
+									<span>开启不一样的暗恋吧</span>
+								</li>
+								<li>
+									<a href="">
+										<img src="img/intdex-SLevel/5.jpg" height="137" width="104">
+									</a>
+									<a href="" class="link">丑男变美女</a>
+									<span>屌丝性转火辣美女</span></li>
+									<li>
+										<a href="">
+											<img src="img/intdex-SLevel/6.jpg" height="137" width="104">
+										</a>
+										<a href="" class="link">记忆分裂</a>
+										<span>你的记忆值多少钱！</span>
+									</li>
+									<li>
+										<a href="">
+											<img src="img/intdex-SLevel/7.jpg" height="137" width="104">
+										</a>
+										<a href="" class="link">端脑</a>
+										<span>极致大脑游戏解谜</span>
+									</li>
+								</ul>
+
+							</div>
+						</div>
+						<div class="subLeftBottom">
+							<div class="subRowTitle bg4">
+								<span class="leftSpan">[一周热门点击]</span>
+								<span class="rightSpan"><a href="">{更多]</a></span>
+							</div>
+							<div class="subRowContent">
+								<ul>
+									<li>
+										<a href="">
+											<img src="img/intdex-SLevel/1.jpg" height="137" width="104">
+										</a>
+										<a href="" class="link">妖神记</a>
+										<span>妖灵世界中的生存</span>
+									</li>
+									<li>
+										<a href="">
+											<img src="img/intdex-SLevel/2.jpg" height="137" width="104">
+										</a>
+										<a href="" class="link">三千虚</a>
+										<span>落难皇子与奇葩千金</span>
+									</li>
+									<li>
+										<a href="">
+											<img src="img/intdex-SLevel/3.jpg" height="137" width="104">
+										</a>
+										<a href="" class="link">猫之名</a>
+										<span>从天上掉下来个妹</span>
+									</li>
+									<li>
+										<a href="">
+											<img src="img/intdex-SLevel/4.jpg" height="137" width="104">
+										</a>
+										<a href="" class="link">最暗恋</a>
+										<span>开启不一样的暗恋吧</span>
+									</li>
+									<li>
+										<a href="">
+											<img src="img/intdex-SLevel/5.jpg" height="137" width="104">
+										</a>
+										<a href="" class="link">丑男变美女</a>
+										<span>屌丝性转火辣美女</span></li>
+										<li>
+											<a href="">
+												<img src="img/intdex-SLevel/6.jpg" height="137" width="104">
+											</a>
+											<a href="" class="link">记忆分裂</a>
+											<span>你的记忆值多少钱！</span>
+										</li>
+										<li>
+											<a href="">
+												<img src="img/intdex-SLevel/7.jpg" height="137" width="104">
+											</a>
+											<a href="" class="link">端脑</a>
+											<span>极致大脑游戏解谜</span>
+										</li>
+									</ul>
+
+								</div>
+							</div>
+						</aside>
+						<aside  class="right">
+							<!--最新更新-->
+							<div class="subRight">
+								<div class="subRightTitle1">最新更新</div>
+								<div class="subRightContent">
+									<ul>
+										<li>
+											<div class="seq_1" style="height=14px;width=14px"></div>
+											<a href="">我和失恋宝宝</a>
+											<span>0</span>
+										</li>
+										<li>
+											<div class="seq_2" style="height=14px;width=14px"></div>
+											<a href="">我和失恋宝宝</a>
+											<span>0</span>
+										</li>
+										<li>
+											<div class="seq_3" style="height=14px;width=14px"></div>
+											<a href="">我和失恋宝宝</a>
+											<span>0</span>
+										</li>
+										<li>
+											<div class="seq_4" style="height=14px;width=14px"></div>
+											<a href="">我和失恋宝宝</a>
+											<span>0</span>
+										</li>
+										<li>
+											<div class="seq_5" style="height=14px;width=14px"></div>
+											<a href="">我和失恋宝宝</a>
+											<span>0</span>
+										</li>
+										<li>
+											<div class="seq_6" style="height=14px;width=14px"></div>
+											<a href="">我和失恋宝宝</a>
+											<span>0</span>
+										</li>
+										<li>
+											<div class="seq_7" style="height=14px;width=14px"></div>
+											<a href="">我和失恋宝宝</a>
+											<span>0</span>
+										</li>
+										<li>
+											<div class="seq_8" style="height=14px;width=14px"></div>
+											<a href="">我和失恋宝宝</a>
+											<span>0</span>
+										</li>
+										<li>
+											<div class="seq_9" style="height=14px;width=14px"></div>
+											<a href="">我和失恋宝宝</a>
+											<span>0</span>
+										</li>
+										<li>
+											<div class="seq_10" style="height=14px;width=14px"></div>
+											<a href="">我和失恋宝宝</a>
+											<span>0</span>
+										</li>
+
+									</ul>
+								</div>
+							</div>
+							<!--推荐榜-->
+							<div class="subRight">
+								<div class="subRightTitle2">推荐榜</div>
+								<div class="subRightContent">
+									<ul>
+										<li>
+											<div class="seq_1" style="height=14px;width=14px"></div>
+											<a href="">我和失恋宝宝</a>
+											<span>0</span>
+										</li>
+										<li>
+											<div class="seq_2" style="height=14px;width=14px"></div>
+											<a href="">我和失恋宝宝</a>
+											<span>0</span>
+										</li>
+										<li>
+											<div class="seq_3" style="height=14px;width=14px"></div>
+											<a href="">我和失恋宝宝</a>
+											<span>0</span>
+										</li>
+										<li>
+											<div class="seq_4" style="height=14px;width=14px"></div>
+											<a href="">我和失恋宝宝</a>
+											<span>0</span>
+										</li>
+										<li>
+											<div class="seq_5" style="height=14px;width=14px"></div>
+											<a href="">我和失恋宝宝</a>
+											<span>0</span>
+										</li>
+										<li>
+											<div class="seq_6" style="height=14px;width=14px"></div>
+											<a href="">我和失恋宝宝</a>
+											<span>0</span>
+										</li>
+										<li>
+											<div class="seq_7" style="height=14px;width=14px"></div>
+											<a href="">我和失恋宝宝</a>
+											<span>0</span>
+										</li>
+										<li>
+											<div class="seq_8" style="height=14px;width=14px"></div>
+											<a href="">我和失恋宝宝</a>
+											<span>0</span>
+										</li>
+										<li>
+											<div class="seq_9" style="height=14px;width=14px"></div>
+											<a href="">我和失恋宝宝</a>
+											<span>0</span>
+										</li>
+										<li>
+											<div class="seq_10" style="height=14px;width=14px"></div>
+											<a href="">我和失恋宝宝</a>
+											<span>0</span>
+										</li>
+
+									</ul>
+								</div>
+							</div>
+							<!--动漫新报-->
+							<div class="subRight">
+								<div class="subRightTitle3">动漫快报</div>
+								<div class="subRightContent">
+									<ul>
+										<li>
+											<div class="seq_1" style="height=14px;width=14px"></div>
+											<a href="">我和失恋宝宝</a>
+											<span>0</span>
+										</li>
+										<li>
+											<div class="seq_2" style="height=14px;width=14px"></div>
+											<a href="">我和失恋宝宝</a>
+											<span>0</span>
+										</li>
+										<li>
+											<div class="seq_3" style="height=14px;width=14px"></div>
+											<a href="">我和失恋宝宝</a>
+											<span>0</span>
+										</li>
+										<li>
+											<div class="seq_4" style="height=14px;width=14px"></div>
+											<a href="">我和失恋宝宝</a>
+											<span>0</span>
+										</li>
+										<li>
+											<div class="seq_5" style="height=14px;width=14px"></div>
+											<a href="">我和失恋宝宝</a>
+											<span>0</span>
+										</li>
+										<li>
+											<div class="seq_6" style="height=14px;width=14px"></div>
+											<a href="">我和失恋宝宝</a>
+											<span>0</span>
+										</li>
+										<li>
+											<div class="seq_7" style="height=14px;width=14px"></div>
+											<a href="">我和失恋宝宝</a>
+											<span>0</span>
+										</li>
+										<li>
+											<div class="seq_8" style="height=14px;width=14px"></div>
+											<a href="">我和失恋宝宝</a>
+											<span>0</span>
+										</li>
+
+									</ul>
+								</div>
+							</div>
+							<!--广告区-->
+							<div class="subRight">
+								<a href="">
+									<img src="img/advance_1.jpg" height="70" width="220">
+								</a>
+								<a href="">
+									<img src="img/advance_2.jpg" height="140" width="210">
+								</a>
+							</div>
+						</aside>
+						<footer class="footer">
+							<div class="footerDiv">
+								<div class="footerTitleBG1">
+									<span>关于我们</span>
+								</div>
+								<a href="">关于LOLO</a>
+								<a href="">法律声明</a>
+								<a href="">招聘启事</a>
+								<a href="">新手上门</a>
+							</div>
+							<div class="footerDiv">
+								<div class="footerTitleBG2">
+									<span>商务合作</span>
+								</div>
+								<a href="">市场合作</a>
+								<a href="">友情链接</a>
+								<a href="">商务合作</a>
+								<a href="">a站合作</a>
+							</div>
+							<div class="footerDiv">
+								<div class="footerTitleBG3">
+									<span>联系我们</span>
+								</div>
+								<a href="">在线客服</a>
+								<a href="">官方微博</a>
+								<a href="">意见反馈</a>
+								<a href="">QQ联系</a>
+							</div>
+							<div class="footerDiv">
+								<div class="footerTitleBG4">
+									<span>市场推广</span>
+								</div>
+								<a href="">哔哩哔哩</a>
+								<a href="">a站</a>
+								<a href="">178漫画</a>
+								<a href="">爱漫画</a>
+							</div>
+							<div class="footerLine">
+							</div>
+							<div class=" footerNote">
+								<p>©LOLO漫画 <a href="file:///F:/LOLOWeb/index.html">file:///F:/LOLOWeb</a>  LOLO个人所有</p>
+								<p>滇ICP证:120807号 网络文化经营许可证:京网文[2015]0019-019号</p>
+								<p>京公网安备：11010102000514号</p>
+							</div>
+						</footer>
+					</div>
+
+				</body>
+				</html>

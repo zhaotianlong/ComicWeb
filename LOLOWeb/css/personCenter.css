@@ -1,0 +1,614 @@
+.personCenter{
+	background: url('../img/personCenter/bg2.jpg') no-repeat;
+	height: 800px;
+}	
+
+.personCenter .container{
+	margin: 180px auto;
+	width: 1200px;
+	height: 0px;
+}
+
+.personCenter .left{
+	width: 235px;
+}
+
+.personCenter .userArea{
+	background: url('../img/personCenter/userArea.jpg');
+	width: 235px;
+	height: 167px;
+}
+.userArea .userIcon{
+	position: relative;
+	top: -50%;
+	width: 154px;
+	margin:0 auto;
+	border: 3px solid #fff;
+}
+
+.userArea .nickName{
+	text-align: center;
+	position: relative;
+	top: -40%;
+	font-size: 18px;
+	color: #fff;
+}
+.userArea .userId{
+	text-align: center;
+	position: relative;
+	top: -30%;
+	font-size: 18px;
+	color: #fff;
+}
+.personCenter .userChoose{
+	width: 233px;
+	border:1px solid #d6d6d6;
+	background-color: #efefef;
+	height: 690px;
+}
+.userChoose ul{
+	list-style:none; 
+	margin: 0px auto;
+	padding: 0px;
+}
+
+.userChoose ul li{
+	margin-top: 20px; 
+	padding-bottom:20px;
+	width: 200px;
+	margin-left: 20px;
+
+}
+.userChoose span{
+	font-size: 18px;
+	color: #666;
+	margin-right: 5px;
+	margin-left: 5px;
+}
+.userChoose a{
+	cursor: pointer;
+}
+
+.userChoose .line{
+	border-top: 1px dashed #666;
+	width: 200px;
+	margin-left: 15px;
+}
+
+.personchooseIcon1{
+	background: url('../img/login/homePage24.png');
+	width: 24px;
+	height: 24px;
+	display: inline-block;
+}
+.personchooseIcon2{
+	background: url('../img/login/message24.png');
+	width: 24px;
+	height: 24px;
+	display: inline-block;
+}
+
+.personchooseIcon3{
+	background: url('../img/login/love24.png');
+	width: 24px;
+	height: 24px;
+	display: inline-block;
+}
+.personchooseIcon4{
+	background: url('../img/login/');
+	width: 24px;
+	height: 24px;
+	display: inline-block;
+}
+.personchooseIcon5{
+	background: url('../img/login/share24.png');
+	width: 24px;
+	height: 24px;
+	display: inline-block;
+}
+.personchooseIcon6{
+	background: url('../img/login/modify24.png');
+	width: 24px;
+	height: 24px;
+	display: inline-block;
+}
+.personchooseIcon7{
+	background: url('../img/login/personImg24.png');
+	width: 24px;
+	height: 24px;
+	display: inline-block;
+}
+
+.personCenter .right{
+	background-color: #fff;
+	width: 965px;
+	opacity: 0.8;
+	height: 880px;
+	border-radius: 5px; 
+}
+
+.personCenter .subLeft_pc{
+	float: left;
+	width: 640px;	
+}
+
+.personCenter .personContent{
+	width: 600px;
+	margin:0 auto;
+}
+
+.personContent div{
+	display: inline-block;
+	font-size: 18px;
+	color: #666;
+	margin-right: 10px;
+}
+
+.messageContent{
+	background-color: #efefef;
+	border-radius: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 10px;
+	margin-left: 20px;
+	margin-top: 20px;
+}
+
+.messageContent div{
+	display: inline-block;
+	color: #000;
+	font-size: 18px;
+	margin-left: 20px;
+}
+.messageContent span{
+	color: red;
+	font-size: 20px;
+}
+
+.subLeft_pc .dcondition div{
+	background-color: #efefef;
+	border-radius: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 10px;
+	margin-left: 20px;
+	margin-top: 20px;
+}
+.subLeft_pc .dcondition h1{
+	margin-left: 20px;
+}
+.subLeft_pc .dcondition a{
+	padding-left: 250px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	font-size: 18px;
+	cursor: pointer;
+}
+
+.personCenter .subRight_pc{
+	float: right;
+	width: 285px;
+}
+.subRight_pc .myRead{
+	margin:0 auto;
+}
+.subRight_pc .myTitle{
+	border-bottom: 1px solid #666;
+	padding-bottom: -10px;
+	width: 260px;
+}
+.myRead .myTitle h1{
+	display: inline-block;
+	margin-bottom: 10px;
+}
+.myRead .myTitle div{
+	display: inline-block;
+	margin-left: 80px;
+}
+.myRead .myContent_list{
+	margin:10px;
+	list-style:none;
+	padding: 0px;
+}
+.myRead .myContent_list li{
+	display: inline-block;
+	margin-bottom: 5px;
+}
+.myRead .myContent_list li span{
+	display: block;
+	text-align: center;
+	font-size: 10px;
+	color: #000;
+	width: 80px;
+}
+.myRead .update{
+	list-style:none;
+	padding:0px;
+	width: 260px;
+}
+.update li{
+	display: block;
+	margin-bottom: 5px;
+}
+.update li div{
+	display: inline-block;
+	font-size: 18px;
+}
+.myRead .youLove{
+	padding: 0px;
+}
+
+.youLove li{
+	list-style: none;
+	margin-bottom: 2px;
+	display: inline-block;
+}
+.youLove li div{
+	display: inline-block;
+	margin-right: 10px;
+}
+.youLove li span{
+	display: block;
+	font-size: 10px;
+	color: #000;
+	margin-bottom: 2px;
+}
+
+
+
+/*消息中心*/
+.messageCenter{
+	width: 925px;
+	margin:0px auto;
+}
+.messageCenter h1{
+	border-left: 3px solid #3591d5;
+	padding-left: 10px;
+	border-bottom: 1px solid #efefef;
+	padding-bottom: 10px;
+}
+
+.messageCenter .messageContent{
+	margin-left: 0px;
+}
+.messageCenter .messageBox{
+	margin-top: 20px;
+	border-bottom: 1px solid #efefef;
+	padding-bottom: 10px;
+}
+.messageBox .messageButton{
+	display: inline-block;
+	padding: 5px 10px 5px 10px;
+	font-size: 10px;
+	color: #fff;
+	background-color: #ff7521;
+	text-decoration: none;
+	cursor: pointer;
+	margin-right: 10px;
+}
+
+.messageBox table{
+	margin-top: 10px;
+	width: 925px;
+}
+.messageBox .td_1{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: #efefef;
+}
+.messageBox .th_1{
+	width: 200px;
+	text-align: center;
+	border-bottom: 1px solid #efefef;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: #efefef;
+}
+.messageBox .th_2{
+	width: 600px;
+	text-align: center;
+	border-bottom: 1px solid #efefef;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: #efefef;
+}
+
+.messageBox .th_3{
+	width: 100px;
+	text-align: center;
+	border-bottom: 1px solid #efefef;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: #efefef;
+}
+
+/*订阅作品*/
+.subscription{
+	width: 925px;
+	margin:0px auto;
+}
+
+.subscription h1{
+	border-left: 3px solid #3591d5;
+	padding-left: 10px;
+	border-bottom: 1px solid #efefef;
+	padding-bottom: 10px;
+}
+
+.subscription .subscriptionContent{
+	margin-left: 0px;
+	margin-top: 20px;
+	border:1px solid #EFEFEF;
+	padding: 10px;
+}
+.subscriptionContent .subscriptionTitle{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.subscriptionContent .subscriptionTitle a{
+	display: inline-block;
+	font-size: 15px;
+	color: #939393;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.subscriptionTitle .titleLine{
+	display: inline-block;
+	border-right: 2px solid #000;
+	padding-right:10px;
+	margin-right: 5px; 
+}
+.subscriptionOne{
+	display: inline-block;
+	width: 270px;
+	height: 120px;
+	padding: 5px;
+	border:1px solid #efefef;
+}
+.subscriptionOne img{
+	width: 90px;
+	height: 117px;
+}
+
+.subscriptionOne .imgLink{
+	display:inline-block;
+	text-decoration: none;
+	cursor: pointer;
+	float: left;
+
+}
+.subscriptionOne .fontDes{
+	font-size: 15px;
+	color: #828282;
+	margin-top: 10px;
+	text-decoration: none;
+}
+
+.subscriptionOne .fontRed{
+	color: red;
+}
+
+.subscriptionOne .buttonOrange{
+	margin-top: 17px;
+	background-color: orange;
+	padding: 5px;
+	margin-left: 5px;
+}
+
+.subscriptionOne .buttonBlue{
+	margin-top: 17px;
+	padding: 5px;
+	margin-left: 5px;
+}
+
+ .subscriptionLine{
+	width: 880px;
+	border-top: 1px solid #828282;
+	border-bottom: 1px solid #efefef;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.subscriptionFooter{
+	width: 400px;
+	margin:0px auto;
+} 
+.subscriptionFooter .buttonWhite{
+	padding:5px 10px 5px 10px;
+	border-radius: 5px;
+}
+
+/*关注的作者*/
+.inerestWriter{
+	width: 925px;
+	margin:0px auto;
+}
+
+.inerestWriter h1{
+	border-left: 3px solid #3591d5;
+	padding-left: 10px;
+	border-bottom: 1px solid #efefef;
+	padding-bottom: 10px;
+}
+.inerestWriter .interestTitle{
+	margin-bottom: 20px;
+}
+
+.inerestWriter .fontRed{
+	color: red;
+}
+.inerestWriter table{
+	padding-top: 20px;
+	width: 925px;
+	margin:0px auto;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #efefef;
+}
+
+.inerestWriter .td_1{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: #efefef;
+}
+.inerestWriter .th_1{
+	width: 300px;
+	text-align: center;
+	border-bottom: 1px solid #efefef;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: #efefef;
+}
+.inerestWriter .th_2{
+	width: 150px;
+	text-align: center;
+	border-bottom: 1px solid #efefef;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: #efefef;
+}
+.inerestWriter .subscriptionFooter{
+	width: 400px;
+	margin:20px auto;
+}
+
+/*修改资料*/
+.profile{
+	width: 925px;
+	margin:0px auto;
+}
+
+.profile h1{
+	border-left: 3px solid #3591d5;
+	padding-left: 10px;
+	border-bottom: 1px solid #efefef;
+	padding-bottom: 10px;
+}
+.profile .profileContent{
+	width: 500px;
+	margin:0px auto;
+}
+.profile .profileContent div{
+	margin-top: 20px;
+}
+.profile .profileContent  .buttonYellowGreen{
+	padding: 5px 20px 5px 20px;
+	font-size: 18px;
+	background-color: yellowgreen;
+	margin-top: 20px;
+	margin-left: 20px;
+	margin-right: 20px;
+
+}
+.profile .profileContent  .buttonOrange{
+	padding: 5px 20px 5px 20px;
+	font-size: 18px;
+	background-color: orange;
+	margin-top: 20px;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+/*修改密码*/
+.password{
+	width: 925px;
+	margin:0px auto;
+}
+
+.password h1{
+	border-left: 3px solid #3591d5;
+	padding-left: 10px;
+	border-bottom: 1px solid #efefef;
+	padding-bottom: 10px;
+}
+.password  .passwordContent{
+	width: 500px;
+	margin:0px auto;
+}
+.password  .passwordContent div{
+	margin: 20px;
+}
+.password  .passwordContent span{
+	font-size: 20px;
+	color: #828282;
+	
+}
+.password  .passwordContent .disableInput{
+	font-size: 20px;
+	padding: 5px;
+	border: 0px;
+	margin-left: -10px;
+	color: #000;
+	border:1px solid #828282; 
+}
+.password  .passwordContent .enableInput{
+	font-size: 20px;
+	padding: 5px;
+	border: 0px;
+	margin-left: -10px;
+	color: #000;
+	border:1px solid #828282; 
+}
+.password  .passwordContent .buttonGroup{
+	width: 300px;
+	margin: 0px auto;
+}
+.password  .passwordContent .buttonYellowGreen{
+	padding: 5px 20px 5px 20px;
+	font-size: 18px;
+	background-color: yellowgreen;
+	margin-top: 20px;
+	margin-left: 20px;
+	margin-right: 20px;
+
+}
+.password  .passwordContent .buttonOrange{
+	padding: 5px 20px 5px 20px;
+	font-size: 18px;
+	background-color: orange;
+	margin-top: 20px;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+/*修改头像*/
+.icon{
+	width: 925px;
+	margin:0px auto;
+}
+
+.icon h1{
+	border-left: 3px solid #3591d5;
+	padding-left: 10px;
+	border-bottom: 1px solid #efefef;
+	padding-bottom: 10px;
+}
+.icon .fontDes{
+    margin-bottom: 20px;
+    font-size: 15px;
+    color: #828282;
+    padding-left: 20px;
+
+}
+.icon .iconBigImg{
+	background-image: url('../img/bg_footer.png');
+	height: 600px;
+	width: 600px;
+	float: left;
+}
+.icon .iconImgGroup{
+	display: inline-block;
+	padding: 20px;
+}
+.icon .iconPreImg{
+	background-image: url('../img/bg_footer.png');
+	height: 200px;
+	width: 200px;
+}
+.icon .buttonBlue{
+	
+	margin-left: 20px;
+    padding: 5px 10px;
+    font-size: 18px;
+    margin-top: 20px;
+
+}
